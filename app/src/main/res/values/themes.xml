@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AnimeAIApp" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#FFFFF0F5</item>
+        <item name="android:navigationBarColor">#FFFFF0F5</item>
+        <item name="android:windowBackground">#FFFFF0F5</item>
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path
+        android:fillColor="#FFD4F5E2"
+        android:pathData="M40,0C62.091,0 80,17.909 80,40C80,62.091 62.091,80 40,80C17.909,80 0,62.091 0,40C0,17.909 17.909,0 40,0Z" />
+    <!-- Robot/AI head -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M22,26C22,18 30,14 40,14C50,14 58,18 58,26V46C58,56 50,60 40,60C30,60 22,56 22,46V26Z" />
+    <!-- Antenna -->
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M38,14L38,6L42,6L42,14Z" />
+    <circle
+        android:fillColor="#FFFF478D"
+        android:cx="40"
+        android:cy="6"
+        android:r="3" />
+    <!-- Eyes (digital/HUD style) -->
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M30,34L36,34L36,38L30,38Z" />
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M44,34L50,34L50,38L44,38Z" />
+    <!-- Smile -->
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M34,46L46,46" />
+    <!-- Holographic rings -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FF9850FF"
+        android:pathData="M20,50C26,58 54,58 60,50" />
+</vector>

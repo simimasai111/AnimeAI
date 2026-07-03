@@ -1,0 +1,43 @@
+package com.animeai.app.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val Pink50 = Color(0xFFFFF0F5)
+val Pink100 = Color(0xFFFFD6E7)
+val Pink200 = Color(0xFFFFB3D0)
+val Pink300 = Color(0xFFFF8FBA)
+val Pink400 = Color(0xFFFF6BA3)
+val Pink500 = Color(0xFFFF478D)
+val Pink600 = Color(0xFFE03A7A)
+val Pink700 = Color(0xFFC02D67)
+val Pink800 = Color(0xFFA12055)
+val Pink900 = Color(0xFF811342)
+
+val Lavender50 = Color(0xFFF3E8FF)
+val Lavender100 = Color(0xFFE5D0FF)
+val Lavender200 = Color(0xFFD4B0FF)
+val Lavender300 = Color(0xFFC090FF)
+val Lavender400 = Color(0xFFAC70FF)
+val Lavender500 = Color(0xFF9850FF)
+val Lavender600 = Color(0xFF7E3DD6)
+val Lavender700 = Color(0xFF642BAD)
+val Lavender800 = Color(0xFF4A1984)
+val Lavender900 = Color(0xFF30075B)
+
+val RoseQuartz = Color(0xFFF7C8D8)
+val SoftLavender = Color(0xFFE8D0F0)
+val Peach = Color(0xFFFFDAB9)
+val MintGreen = Color(0xFFD4F5E2)
+val SkyBlue = Color(0xFFD0E8FF)
+
+val White = Color(0xFFFFFFFF)
+val Gray50 = Color(0xFFFAFAFA)
+val Gray100 = Color(0xFFF5F5F5)
+val Gray200 = Color(0xFFEEEEEE)
+val Gray300 = Color(0xFFE0E0E0)
+val Gray400 = Color(0xFFBDBDBD)
+val Gray500 = Color(0xFF9E9E9E)
+val Gray600 = Color(0xFF757575)
+val Gray700 = Color(0xFF616161)
+val Gray800 = Color(0xFF424242)
+val Gray900 = Color(0xFF212121)

@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path
+        android:fillColor="#FFD4B0FF"
+        android:pathData="M40,0C62.091,0 80,17.909 80,40C80,62.091 62.091,80 40,80C17.909,80 0,62.091 0,40C0,17.909 17.909,0 40,0Z" />
+    <!-- Long hair -->
+    <path
+        android:fillColor="#FF2C1810"
+        android:pathData="M18,28C18,18 28,14 40,14C52,14 62,18 62,28V55C62,65 52,70 40,70C28,70 18,65 18,55V28Z" />
+    <!-- Face -->
+    <path
+        android:fillColor="#FFFFF0F5"
+        android:pathData="M24,28C24,24 32,22 40,22C48,22 56,24 56,28V44C56,50 48,54 40,54C32,54 24,50 24,44V28Z" />
+    <!-- Eyes (gentle closed) -->
+    <path
+        android:fillColor="#FF2C1810"
+        android:pathData="M31,36C33,35 36,35 38,36" />
+    <path
+        android:fillColor="#FF2C1810"
+        android:pathData="M42,36C44,35 47,35 49,36" />
+    <!-- Blush -->
+    <path
+        android:fillColor="#FFFFB3D0"
+        android:pathData="M28,42C30,44 34,44 34,42C34,43 30,43 28,42Z"
+        android:alpha="0.5" />
+    <path
+        android:fillColor="#FFFFB3D0"
+        android:pathData="M46,42C48,44 52,44 52,42C52,43 48,43 46,42Z"
+        android:alpha="0.5" />
+    <!-- Sweet smile -->
+    <path
+        android:fillColor="#FFFF6BA3"
+        android:pathData="M36,48C38,50 42,50 44,48" />
+    <!-- Flower ornament -->
+    <path
+        android:fillColor="#FFFF8FBA"
+        android:pathData="M56,22C58,18 62,18 60,22C62,20 58,24 56,22Z" />
+</vector>

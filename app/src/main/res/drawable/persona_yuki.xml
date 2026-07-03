@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path
+        android:fillColor="#FFD0E8FF"
+        android:pathData="M40,0C62.091,0 80,17.909 80,40C80,62.091 62.091,80 40,80C17.909,80 0,62.091 0,40C0,17.909 17.909,0 40,0Z" />
+    <!-- Cat ears -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M22,22L18,8L30,18Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M58,22L62,8L50,18Z" />
+    <path
+        android:fillColor="#FFFFB3D0"
+        android:pathData="M22,22L20,14L28,20Z" />
+    <path
+        android:fillColor="#FFFFB3D0"
+        android:pathData="M58,22L60,14L52,20Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M20,28C20,18 28,14 40,14C52,14 60,18 60,28V48C60,58 52,62 40,62C28,62 20,58 20,48V28Z" />
+    <!-- Face -->
+    <path
+        android:fillColor="#FFFFF0F5"
+        android:pathData="M24,28C24,24 32,22 40,22C48,22 56,24 56,28V44C56,50 48,54 40,54C32,54 24,50 24,44V28Z" />
+    <!-- Eyes (tsundere looking away) -->
+    <path
+        android:fillColor="#FF4A90D9"
+        android:pathData="M30,35C32,33 36,33 37,36" />
+    <path
+        android:fillColor="#FF4A90D9"
+        android:pathData="M44,34C46,33 49,34 50,36" />
+    <!-- Cat nose -->
+    <path
+        android:fillColor="#FFFFB3D0"
+        android:pathData="M40,42L39,44L41,44Z" />
+    <!-- Cat whiskers -->
+    <path
+        android:fillColor="#FF424242"
+        android:pathData="M26,43L34,44" />
+    <path
+        android:fillColor="#FF424242"
+        android:pathData="M26,46L34,45" />
+    <path
+        android:fillColor="#FF424242"
+        android:pathData="M54,43L46,44" />
+    <path
+        android:fillColor="#FF424242"
+        android:pathData="M54,46L46,45" />
+</vector>

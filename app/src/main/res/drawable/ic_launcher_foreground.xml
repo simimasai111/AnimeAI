@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Sparkle star -->
+    <path
+        android:fillColor="#FFFF478D"
+        android:pathData="M54,20L58,36L74,40L58,44L54,60L50,44L34,40L50,36Z" />
+    <!-- AI text indicator -->
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M40,70L45,52L50,60L55,48L60,65L68,70"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FF9850FF" />
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M44,66L52,66" />
+    <path
+        android:fillColor="#FF9850FF"
+        android:pathData="M56,64L64,64" />
+</vector>

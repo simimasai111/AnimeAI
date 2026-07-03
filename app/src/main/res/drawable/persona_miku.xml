@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FFFFB3D0"
+        android:pathData="M40,0C62.091,0 80,17.909 80,40C80,62.091 62.091,80 40,80C17.909,80 0,62.091 0,40C0,17.909 17.909,0 40,0Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#FF4A90D9"
+        android:pathData="M20,30C20,20 28,15 40,15C52,15 60,20 60,30V50C60,60 52,65 40,65C28,65 20,60 20,50V30Z" />
+    <!-- Face -->
+    <path
+        android:fillColor="#FFFFF0F5"
+        android:pathData="M26,30C26,26 32,23 40,23C48,23 54,26 54,30V44C54,50 48,54 40,54C32,54 26,50 26,44V30Z" />
+    <!-- Eyes -->
+    <path
+        android:fillColor="#FF4A90D9"
+        android:pathData="M32,35C33,33 36,33 37,35C38,37 36,39 34.5,39C33,39 31,37 32,35Z" />
+    <path
+        android:fillColor="#FF4A90D9"
+        android:pathData="M43,35C44,33 47,33 48,35C49,37 47,39 45.5,39C44,39 42,37 43,35Z" />
+    <!-- Mouth -->
+    <path
+        android:fillColor="#FFFF6BA3"
+        android:pathData="M36,46C37,48 43,48 44,46C43,47 37,47 36,46Z" />
+    <!-- Hair ribbons -->
+    <path
+        android:fillColor="#FFFF478D"
+        android:pathData="M16,28L20,24L22,30Z" />
+    <path
+        android:fillColor="#FFFF478D"
+        android:pathData="M64,28L60,24L58,30Z" />
+</vector>
