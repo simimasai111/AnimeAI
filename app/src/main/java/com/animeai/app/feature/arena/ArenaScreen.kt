@@ -196,7 +196,7 @@ fun ArenaScreen(
                                             )
                                         }
                                     } else if (contender.isComplete && contender.response != null) {
-                                        val response = contender.response
+                                        val response = contender.response!!
                                         LazyColumn {
                                             item {
                                                 Text(
