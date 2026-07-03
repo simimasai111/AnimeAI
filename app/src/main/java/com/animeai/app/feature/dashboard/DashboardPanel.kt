@@ -15,22 +15,6 @@ import com.animeai.app.feature.emotion.EmotionAnalysis
 import com.animeai.app.feature.emotion.EmotionChart
 import com.animeai.app.util.TokenUtils
 
-data class DashboardState(
-    val totalTokens: Int = 0,
-    val contextUsagePercent: Float = 0f,
-    val messageCount: Int = 0,
-    val activeModelName: String = "gpt-4o",
-    val conversationDuration: String = "00:00",
-    val contextInfo: ContextInfo = ContextInfo()
-)
-
-data class ContextInfo(
-    val totalTokens: Int = 0,
-    val usedPercentage: Float = 0f,
-    val maxTokens: Int = 128000,
-    val messagesCount: Int = 0
-)
-
 @Composable
 fun DashboardPanel(
     isVisible: Boolean,
@@ -109,7 +93,7 @@ fun DashboardPanel(
                     }
                     Spacer(modifier = Modifier.height(4.dp))
                     LinearProgressIndicator(
-                        progress = { contextInfo.usedPercentage / 100f },
+                        progress = contextInfo.usedPercentage / 100f,
                         modifier = Modifier.fillMaxWidth().height(6.dp),
                         color = when {
                             contextInfo.usedPercentage < 50 -> MaterialTheme.colorScheme.primary
