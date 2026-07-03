@@ -15,58 +15,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.animeai.app.data.model.PersonaType
 
-data class PersonalityTraits(
-    val formality: Float = 0.5f,
-    val warmth: Float = 0.7f,
-    val humor: Float = 0.5f,
-    val professionalism: Float = 0.3f,
-    val creativity: Float = 0.7f,
-    val talkativeness: Float = 0.5f
-)
-
-data class SpeakingStyle(
-    val useEmoji: Boolean = true,
-    val useSlang: Boolean = false
-)
-
-data class PersonaBlueprint(
-    val name: String = "未命名人格",
-    val description: String = "",
-    val type: PersonaType = PersonaType.ANIME,
-    val personalityTraits: PersonalityTraits = PersonalityTraits(),
-    val speakingStyle: SpeakingStyle = SpeakingStyle(),
-    val background: String = "",
-    val generatedSystemPrompt: String = "",
-    val greeting: String = ""
-)
-
-object PersonaPromptGenerator {
-    fun generate(blueprint: PersonaBlueprint): String {
-        val sb = StringBuilder()
-        sb.appendLine("【人格名称】${blueprint.name}")
-        if (blueprint.description.isNotBlank()) sb.appendLine("【描述】${blueprint.description}")
-        if (blueprint.background.isNotBlank()) sb.appendLine("【背景设定】${blueprint.background}")
-        sb.appendLine()
-        sb.appendLine("【类型】${blueprint.type}")
-        sb.appendLine()
-        sb.appendLine("【性格特征】")
-        sb.appendLine("- 正式程度: ${(blueprint.personalityTraits.formality * 100).toInt()}%")
-        sb.appendLine("- 温暖程度: ${(blueprint.personalityTraits.warmth * 100).toInt()}%")
-        sb.appendLine("- 幽默感: ${(blueprint.personalityTraits.humor * 100).toInt()}%")
-        sb.appendLine("- 专业度: ${(blueprint.personalityTraits.professionalism * 100).toInt()}%")
-        sb.appendLine("- 创造力: ${(blueprint.personalityTraits.creativity * 100).toInt()}%")
-        sb.appendLine("- 话痨程度: ${(blueprint.personalityTraits.talkativeness * 100).toInt()}%")
-        sb.appendLine()
-        sb.appendLine("【说话风格】")
-        sb.appendLine("- 使用表情: ${if (blueprint.speakingStyle.useEmoji) "是" else "否"}")
-        sb.appendLine("- 使用网络语: ${if (blueprint.speakingStyle.useSlang) "是" else "否"}")
-        sb.appendLine()
-        sb.appendLine("【系统指令】")
-        sb.appendLine("请以上述人格设定与用户进行对话，始终保持角色一致性。")
-        return sb.toString()
-    }
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PersonaTrainerScreen(
