@@ -3,7 +3,7 @@ package com.animeai.app.feature.dashboard
 import com.animeai.app.util.TokenUtils
 
 data class DashboardState(
-    val totalTokensUsed: Int = 0,
+    val totalTokens: Int = 0,
     val contextUsagePercent: Float = 0f,
     val messageCount: Int = 0,
     val avgResponseTokens: Int = 0,
