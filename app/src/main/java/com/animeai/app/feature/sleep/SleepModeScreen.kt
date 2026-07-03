@@ -18,14 +18,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-data class SleepThought(
-    val id: String,
-    val sessionId: String,
-    val content: String,
-    val topic: String,
-    val isSignificant: Boolean = false
-)
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SleepModeScreen(
