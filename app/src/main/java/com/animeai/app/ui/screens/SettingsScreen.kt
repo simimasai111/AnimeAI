@@ -148,6 +148,7 @@ fun SettingsScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ConfigCard(
     config: ModelConfig,
@@ -225,6 +226,7 @@ private fun ConfigCard(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ConfigEditDialog(
     config: ModelConfig,
