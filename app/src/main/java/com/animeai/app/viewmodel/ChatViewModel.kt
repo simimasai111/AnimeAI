@@ -236,7 +236,7 @@ class ChatViewModel(application: Application) : AndroidViewModel(application) {
         }
 
         _dashboardState.value = DashboardState(
-            totalTokensUsed = totalTokens,
+            totalTokens = totalTokens,
             contextUsagePercent = contextInfo.usedPercentage,
             messageCount = messages.size,
             avgResponseTokens = totalTokens / messages.size.coerceAtLeast(1),
