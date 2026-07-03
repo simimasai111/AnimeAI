@@ -29,16 +29,6 @@ import com.animeai.app.ui.theme.SkyBlue
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-data class ArenaContender(
-    val persona: Persona,
-    val modelConfigId: String,
-    val response: String? = null,
-    val isLoading: Boolean = true,
-    val isComplete: Boolean = false,
-    val tokenCount: Int = 0,
-    val responseTimeMs: Long = 0L
-)
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ArenaScreen(
@@ -206,10 +196,11 @@ fun ArenaScreen(
                                             )
                                         }
                                     } else if (contender.isComplete && contender.response != null) {
+                                        val response = contender.response
                                         LazyColumn {
                                             item {
                                                 Text(
-                                                    text = contender.response,
+                                                    text = response,
                                                     style = MaterialTheme.typography.bodySmall,
                                                     color = MaterialTheme.colorScheme.onSurface
                                                 )
@@ -258,7 +249,7 @@ fun ArenaScreen(
                                 val voteCount = votes[index] ?: 0
                                 val percentage = (voteCount.toFloat() / totalVotes * 100).toInt()
                                 LinearProgressIndicator(
-                                    progress = { voteCount.toFloat() / totalVotes },
+                                    progress = voteCount.toFloat() / totalVotes,
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .padding(horizontal = 4.dp)
