@@ -29,27 +29,6 @@ import com.animeai.app.ui.theme.SkyBlue
 import com.animeai.app.ui.theme.MintGreen
 import com.animeai.app.ui.theme.Peach
 
-data class PipelineNode(
-    val id: String = java.util.UUID.randomUUID().toString().take(8),
-    val type: NodeType,
-    val label: String,
-    val positionX: Float = 0f,
-    val positionY: Float = 0f
-)
-
-enum class NodeType(val displayName: String) {
-    INPUT("输入"),
-    PROMPT("提示词"),
-    LLM_CALL("LLM 调用"),
-    IMAGE_GEN("图片生成"),
-    CODE_EXEC("代码执行"),
-    CONDITION("条件分支"),
-    MERGE("合并"),
-    FILTER("过滤"),
-    TRANSFORM("转换"),
-    OUTPUT("输出")
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PipelineScreen(
