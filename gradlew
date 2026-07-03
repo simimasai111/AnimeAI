@@ -42,7 +42,6 @@ APP_HOME=$( cd "${APP_HOME:-./}" > /dev/null && pwd -P ) || exit
 APP_NAME="Gradle"
 APP_BASE_NAME=${0##*/}
 
-# Use the maximum available
 MAX_FD=maximum
 
 warn () {
@@ -56,7 +55,6 @@ die () {
     exit 1
 } >&2
 
-# OS specific support
 cygwin=false
 msys=false
 darwin=false
@@ -70,7 +68,6 @@ esac
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
 
-# Determine the Java command
 if [ -n "$JAVA_HOME" ] ; then
     if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
         JAVACMD=$JAVA_HOME/jre/sh/java
@@ -88,7 +85,6 @@ else
     fi
 fi
 
-# Increase the maximum file descriptors
 if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
     case $MAX_FD in
       max*)
@@ -105,16 +101,17 @@ if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
     esac
 fi
 
-# Collect all arguments
 DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
-set -- \
-        "-Dorg.gradle.appname=$APP_BASE_NAME" \
-        -classpath "$CLASSPATH" \
-        org.gradle.wrapper.GradleWrapperMain \
-        "$@"
+
+splitJvmOpts() {
+    JVM_OPTS=("$@")
+}
+
+eval splitJvmOpts $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS
+JVM_OPTS=("${JVM_OPTS[@]}")
 
 exec "$JAVACMD" \
-    $DEFAULT_JVM_OPTS \
-    $JAVA_OPTS \
-    $GRADLE_OPTS \
+    "${JVM_OPTS[@]}" \
+    -classpath "$CLASSPATH" \
+    org.gradle.wrapper.GradleWrapperMain \
     "$@"
