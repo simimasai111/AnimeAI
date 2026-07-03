@@ -63,9 +63,11 @@ fun AppNavGraph(
     val dashboardState by viewModel.dashboardState.collectAsState()
     val emotionAnalysis by viewModel.emotionAnalysis.collectAsState()
 
-    val personaMap = conversations.associate { conv ->
-        conv.personaId to com.animeai.app.data.model.Personas.defaultPersonas.find { it.id == conv.personaId }
-    }
+    val personaMap = conversations.mapNotNull { conv ->
+        com.animeai.app.data.model.Personas.defaultPersonas.find { it.id == conv.personaId }?.let {
+            conv.personaId to it
+        }
+    }.toMap()
 
     NavHost(
         navController = navController,
