@@ -96,7 +96,7 @@ class ChatRepository(private val database: AppDatabase) {
                 )
             )
 
-            val updatedMessages = chatDao.getMessages(conversation.id)
+            val updatedMessages = chatDao.getMessages(conversation.id).first()
             ConversationMemoryService.updateMemory(conversation.id, updatedMessages)
 
             assistantMessage
