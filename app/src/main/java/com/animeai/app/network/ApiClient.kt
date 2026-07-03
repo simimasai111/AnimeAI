@@ -1,6 +1,7 @@
 package com.animeai.app.network
 
 import com.animeai.app.data.model.ApiType
+import com.animeai.app.data.model.ImageGenerationRequest
 import com.animeai.app.data.model.ModelConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
