@@ -3,5 +3,5 @@
     <path android:fillColor="#FF2196F3" android:pathData="M24,0C37.255,0 48,10.745 48,24C48,37.255 37.255,48 24,48C10.745,48 0,37.255 0,24C0,10.745 10.745,0 24,0Z"/>
     <path android:fillColor="#FFFFFFFF" android:pathData="M12,24L24,12L36,24" android:strokeWidth="2" android:strokeColor="#FFFFFFFF"/>
     <path android:fillColor="#FFFFFFFF" android:pathData="M16,24L24,16L32,24" android:strokeWidth="1.5" android:strokeColor="#FFFFFFFF"/>
-    <circle android:fillColor="#FFFFFFFF" android:cx="24" cy="12" r="2"/>
+    <path android:fillColor="#FFFFFFFF" android:pathData="M24,10 a2,2 0 1,0 0,4 a2,2 0 1,0 0,-4 Z"/>
 </vector>
