@@ -1,5 +1,6 @@
 package com.animeai.app.feature.sandbox
 
+import androidx.compose.animation.AnimatedVisibility
 import android.annotation.SuppressLint
 import android.webkit.WebView
 import android.webkit.WebViewClient
