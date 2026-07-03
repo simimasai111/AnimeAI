@@ -7,6 +7,7 @@ import com.animeai.app.network.ApiClient
 import com.animeai.app.service.ConversationMemoryService
 import com.animeai.app.util.TokenUtils
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import java.util.UUID
 
 class ChatRepository(private val database: AppDatabase) {
@@ -50,7 +51,7 @@ class ChatRepository(private val database: AppDatabase) {
         val userTokenCount = TokenUtils.estimateTokenCount(userMessage.content)
         chatDao.insertMessage(userMessage.copy(tokenCount = userTokenCount))
 
-        val messages = chatDao.getMessages(conversation.id)
+        val messages = chatDao.getMessages(conversation.id).first()
         val allContent = messages.map { it.content }
         val contextInfo = TokenUtils.analyzeContext(allContent)
 
