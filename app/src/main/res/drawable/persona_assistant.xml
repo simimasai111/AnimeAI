@@ -14,11 +14,9 @@
     <path
         android:fillColor="#FF9850FF"
         android:pathData="M38,14L38,6L42,6L42,14Z" />
-    <circle
+    <path
         android:fillColor="#FFFF478D"
-        android:cx="40"
-        android:cy="6"
-        android:r="3" />
+        android:pathData="M40,3 a3,3 0 1,0 0,6 a3,3 0 1,0 0,-6 Z"/>
     <!-- Eyes (digital/HUD style) -->
     <path
         android:fillColor="#FF9850FF"
