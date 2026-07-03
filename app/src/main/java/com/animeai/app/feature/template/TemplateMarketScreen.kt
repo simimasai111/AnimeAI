@@ -16,43 +16,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-data class ChatTemplate(
-    val id: String,
-    val name: String,
-    val description: String,
-    val prompt: String,
-    val category: TemplateCategory,
-    val tags: List<String> = emptyList(),
-    val isPremium: Boolean = false,
-    val usageCount: Int = 0
-)
-
-enum class TemplateCategory(val displayName: String) {
-    WRITING("写作"),
-    CODING("编程"),
-    LEARNING("学习"),
-    TRANSLATION("翻译"),
-    BRAINSTORM("头脑风暴"),
-    ANALYSIS("分析"),
-    ROLEPLAY("角色扮演"),
-    CUSTOM("自定义")
-}
-
-object BuiltInTemplates {
-    val templates = listOf(
-        ChatTemplate("t1", "创意写作助手", "帮你构思故事和创作内容", "你是一位创意写作助手，擅长构思故事情节、塑造人物和搭建世界观。请帮助用户完成以下创作任务...", TemplateCategory.WRITING, listOf("故事", "创作", "脑洞"), usageCount = 2341),
-        ChatTemplate("t2", "代码审查员", "专业的代码审查和优化建议", "你是一名资深代码审查员，请对以下代码进行审查，关注性能、可读性、安全性和最佳实践...", TemplateCategory.CODING, listOf("代码", "优化", "调试"), usageCount = 1892),
-        ChatTemplate("t3", "语言学习伙伴", "陪你练习外语口语和写作", "你是一个语言学习伙伴，请用目标语言与用户进行自然对话，在对话中纠正语法错误并提供更地道的表达方式...", TemplateCategory.LEARNING, listOf("外语", "练习", "语法"), usageCount = 1567),
-        ChatTemplate("t4", "专业翻译官", "高质量的多语言翻译服务", "你是一位专业翻译官，精通多国语言和文化背景。请将以下内容翻译成目标语言，注意保持原意、语气和文化适配...", TemplateCategory.TRANSLATION, listOf("翻译", "多语言", "本地化"), usageCount = 3456),
-        ChatTemplate("t5", "头脑风暴引导", "创意激发和思维导图助手", "你是一位头脑风暴引导师，请帮助用户进行创意发散，使用思维导图、SCAMPER等创新方法论...", TemplateCategory.BRAINSTORM, listOf("创意", "发散", "方法论"), usageCount = 1234),
-        ChatTemplate("t6", "数据分析师", "数据可视化和趋势分析", "你是一名数据分析师，擅长从数据中提取洞察，帮你分析数据趋势、制作可视化建议...", TemplateCategory.ANALYSIS, listOf("数据", "图表", "洞察"), usageCount = 2345),
-        ChatTemplate("t7", "动漫角色扮演", "扮演你喜爱的动漫角色", "你是一名资深角色扮演者，请完全融入所扮演的动漫角色，包括说话方式、性格特点和标志性口头禅...", TemplateCategory.ROLEPLAY, listOf("角色", "动漫", "互动"), usageCount = 5678),
-        ChatTemplate("t8", "学术论文润色", "提升论文质量和学术表达", "你是一位学术编辑，具有丰富的论文润色经验。请帮助改进以下论文的学术表达、逻辑结构和格式规范...", TemplateCategory.WRITING, listOf("学术", "论文", "润色"), isPremium = true, usageCount = 3456),
-        ChatTemplate("t9", "面试模拟官", "模拟真实面试场景", "你是一位专业的面试官，请模拟真实面试场景，根据岗位要求提出问题并给出反馈...", TemplateCategory.LEARNING, listOf("面试", "求职", "模拟"), usageCount = 2123),
-        ChatTemplate("t10", "SEO优化专家", "提升网站搜索排名", "你是一位SEO专家，请分析以下内容并提供关键词优化、标题优化和内容结构调整建议...", TemplateCategory.ANALYSIS, listOf("SEO", "关键词", "流量"), isPremium = true, usageCount = 1890)
-    )
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TemplateMarketScreen(
