@@ -17,17 +17,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import java.util.UUID
 
-data class KnowledgeDoc(
-    val id: String,
-    val title: String,
-    val fileName: String,
-    val content: String,
-    val summary: String,
-    val fileType: String = "txt",
-    val fileSize: Long = 0,
-    val isIndexed: Boolean = false
-)
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun KnowledgeBaseScreen(
