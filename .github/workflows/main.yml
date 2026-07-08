@@ -1,0 +1,37 @@
+name: Pull and Save Docker Image
+
+on:
+  workflow_dispatch: # 允许手动触发
+    inputs:
+      image_name:
+        description: 'Docker Image Name'
+        required: true
+        default: 'yujunzhixue/qwen2api:latest'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Pull Docker Image
+      run: |
+        docker pull ${{ github.event.inputs.image_name }}
+
+    - name: Save Docker Image to Tar
+      run: |
+        IMAGE_NAME=$(echo ${{ github.event.inputs.image_name }} | sed 's/[\/:]/_/g')
+        docker save -o ${IMAGE_NAME}.tar ${{ github.event.inputs.image_name }}
+        echo "Saved image as ${IMAGE_NAME}.tar"
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: docker-image-tar
+        path: ./*.tar
+        retention-days: 5
